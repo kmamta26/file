@@ -20,5 +20,5 @@ jobs:
           username: root
           key: ${{ secrets.VPS_SSH_KEY }}
           source: "."
-          target: "/home/deploy/project"
+          target: "/home/deploy/file"
           script_components: 1
