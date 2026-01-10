@@ -3,7 +3,7 @@ name: CD Deploy to VPS
 on:
   push:
     branches:
-       - main
+      - main
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -15,9 +15,9 @@ jobs:
         - name: Deploy to VPS
           uses: appleboy/ssh-action@v1.0.3
           with:
-            host:ssh root@82.112.238.89
-            username:root
-            key: VPS_SSH_KEY
-            script: |"."
+            host: 82.112.238.89
+            username: root
+            key: ${{ secrets.VPS_KEY }} 
+            script: |
               rm -rf /var/www/html/*
               cp -r * /var/www/html/
