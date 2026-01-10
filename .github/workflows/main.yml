@@ -17,7 +17,7 @@ jobs:
           with:
             host:ssh root@82.112.238.89
             username:root
-            key: ${{ secrets.VPS_KEY }}
+            key: VPS_SSH_KEY
             script: |"."
               rm -rf /var/www/html/*
               cp -r * /var/www/html/
