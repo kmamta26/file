@@ -18,7 +18,7 @@ jobs:
         with:
           host: 82.112.238.89
           username: root
-          key: VPS_SSH_KEY
+          key: ${{ secrets.VPS }}
           port: 22
           source: "."
           target: "/var/www/html"
